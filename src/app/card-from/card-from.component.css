@@ -1,0 +1,81 @@
+
+.container{
+  background-image: linear-gradient(to right, #111, #555);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.card {
+  box-shadow: 5px 5px 25px dimgray;
+  padding: 10px 0;
+  width: 30vw;
+  margin: auto;
+  border-radius: 1rem;
+  border: none;
+}
+.card-header h2 {
+  font-weight: 400;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 2rem;
+  color: dimgray;
+}
+form {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.message p {
+  text-align: center;
+  margin: 15px auto;
+  margin-top: 0;
+  color: darkgray;
+  font-size: 0.8rem;
+}
+.button-submit:disabled {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: rgb(126, 158, 133);
+  color: white;
+  border-radius: 10px;
+  cursor: not-allowed;
+}
+.button-submit:enabled {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 10px;
+  background-color: rgb(6, 143, 58);
+  color: white;
+  cursor: pointer;
+}
+.button-reset{
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 10px;
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
+}
+.button-reset:focus{
+  outline: none;
+}
+.ng-con {
+  display: flex;
+  gap: 10px;
+}
+/* .container-credit-card{
+  position: absolute;
+  top: 100vh;
+} */

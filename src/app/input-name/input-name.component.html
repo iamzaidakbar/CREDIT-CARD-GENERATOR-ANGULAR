@@ -1,0 +1,20 @@
+<label>{{ label }}</label>
+<input type="{{ type}}" placeholder="{{ placeholder }}" [ngClass]="{ 'alert-border' : showErrors() }" [formControl]="control" />
+
+  <ng-container
+    *ngIf="showErrors()">
+
+    <div class="alert" *ngIf="control.errors.required">
+      Field cannot be empty
+    </div>
+    <div class="alert" *ngIf="control.errors.pattern">
+      Invalid format
+    </div>
+    <div class="alert" *ngIf="control.errors.minlength">
+      Value cannot be less than {{ control.errors.minlength.requiredLength}} Characters
+    </div>
+    <div class="alert" *ngIf="control.errors.maxlength">
+      Value cannot be more than {{ control.errors.maxlength.requiredLength}} Characters
+    </div>
+    
+  </ng-container>

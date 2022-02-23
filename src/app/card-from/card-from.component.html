@@ -1,0 +1,65 @@
+
+<!-- Generated Message -->
+<app-success 
+  *ngIf="cardForm.valid"
+></app-success>
+
+<!-- Input Fields -->
+<div class="container">
+  <div class="card" (submit)="onSubmit()">
+    <div class="card-header">
+      <h2>Credit Card Generator</h2>
+    </div>
+    <div class="message"><p>Fill all the fields to generate Credit Card</p></div>
+    <form [formGroup]="cardForm">
+      <app-input-name
+      placeholder="eg : Zaid"
+        label="Name"
+        id="my-input"
+        [control]="cardForm.controls.name"
+      ></app-input-name>
+  
+      <app-input-name
+      placeholder="XXXXXXXXXXXXXXXX"
+        label="Card Number"
+        id="my-input"
+        [control]="cardForm.controls.cardNumber"
+      ></app-input-name>
+  
+      <div class="ng-con">
+  
+        <app-input-name
+        placeholder="MM/YY"
+          label="Expiry Date"
+          id="my-input"
+          [control]="cardForm.controls.expiryDate"
+        ></app-input-name>
+  
+        <app-input-name
+        type="password"
+        placeholder="***"
+          label="CVV"
+          id="my-input"
+          [control]="cardForm.controls.cvv"
+        ></app-input-name>
+  
+      </div>
+  
+      <!-- Buttons -->
+
+      <button class="button-submit" type="submit" [disabled]="cardForm.invalid">Ganerated</button>
+      <button class="button-reset" (click)="onReset()" >Reset</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- Credit Card -->
+<div class="container-credit-card">
+  <app-creditcard 
+    [name]="cardForm.controls.name.value"
+    [cardNumber]="cardForm.controls.cardNumber.value"
+    [expiry]="cardForm.controls.expiryDate.value"
+    [cvv]="cardForm.controls.cvv.value"
+  ></app-creditcard>
+</div>
